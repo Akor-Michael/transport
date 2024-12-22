@@ -1,0 +1,13 @@
+{% extends "base/base.html" %}
+
+{% block title %}Create Order{% endblock %}
+
+{% block content %}
+<h2>Create Transport Order</h2>
+<text>Distance in Meters and Fluid Quantity in Liters</text>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Place Order</button>
+</form>
+{% endblock %}

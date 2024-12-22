@@ -1,0 +1,15 @@
+<!-- templates/home.html -->
+{% extends "base/base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h2>Welcome to the Petroleum Fluid Transport System</h2>
+<p>This project provides an online platform for transporting petroleum fluids across states in Nigeria. Here's what you can do:</p>
+<ol>
+    <li>Create an account and log in to your dashboard.</li>
+    <li>Order transportation of petroleum fluids between states.</li>
+    <li>Get pricing estimates based on distance and dynamic calculations.</li>
+</ol>
+<p>Start by <a href="/auth/login/">logging in</a> or <a href="/register/">registering</a> for an account.</p>
+{% endblock %}

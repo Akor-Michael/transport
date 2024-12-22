@@ -1,0 +1,13 @@
+{% extends "base/base.html" %}
+
+{% block title %}Order Details{% endblock %}
+
+{% block content %}
+<h2>Order Details</h2>
+<p>Origin: {{ order.origin.name }}</p>
+<p>Destination: {{ order.destination.name }}</p>
+<p>Fluid Quantity: {{ order.fluid_quantity }} liters</p>
+<p>Distance: {{ order.distance }} Kilometers</p>
+<p>Price: ₦{{ order.price }} Million</p>
+<a href="/order/create/">Create New Order</a>
+{% endblock %}

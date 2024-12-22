@@ -1,0 +1,39 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+
+    <title>{% block title %}Petroleum Transport{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Petroleum Fluid Transport</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                {% if user.is_authenticated %}
+                    <li><form action="{% url 'logout' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit">Logout</button>
+                    </form></li>
+                {% else %}
+                    <li><a href="/auth/login/">Login</a></li>
+                    <li><a href="/register/">Register</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Petroleum Transport</p>
+    </footer>
+</body>
+</html>
